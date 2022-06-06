@@ -15,7 +15,7 @@ jobs:
         uses: checkmarx/ast-github-action@main #Github Action version
         with:
           project_name: JVL4-container
-          cx_tenant: cx-sam-duffin-newman
+          cx_tenant: dp_wp_na
           base_uri: https://ast.checkmarx.net 
           cx_client_id: ${{ secrets.CLIENT_ID }}
           cx_client_secret: ${{ secrets.SECRET }}
