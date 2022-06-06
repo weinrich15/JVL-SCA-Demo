@@ -14,13 +14,13 @@ jobs:
       - name: Checkmarx AST CLI Action
         uses: checkmarx/ast-github-action@main #Github Action version
         with:
-          project_name: JVL4-container
+          project_name: JVL-SCA-Demo
           cx_tenant: dp_wp_na
           base_uri: https://ast.checkmarx.net 
           cx_client_id: ${{ secrets.CLIENT_ID }}
           cx_client_secret: ${{ secrets.SECRET }}
           additional_params: --file-filter !readme --report-format sarif --output-name results
-      - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@v1
-        with:
-          sarif_file: results.sarif
+#      - name: Upload SARIF file
+#        uses: github/codeql-action/upload-sarif@v1
+#        with:
+#          sarif_file: results.sarif
